@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useGlobalContext } from "./components/Contact";
+// import Pagination from "./components/Pagination";
+// import Search from "./components/Search";
+// import Stories from "./components/Stories";
+import "bootstrap/dist/css/bootstrap.min.css";
+import UseeffictAPI from "./components/UseeffictAPI";
 
 function App() {
+  const data = useGlobalContext();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <UseeffictAPI />
+      {/* <Search />
+      <Pagination />
+      <Stories /> */}
+    </>
   );
 }
 
